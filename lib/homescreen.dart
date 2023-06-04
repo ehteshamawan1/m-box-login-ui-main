@@ -115,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Dont have an account?',
+                  "Don't have an account?",
                   style: TextStyle(
                       fontSize: 18,
                       fontFamily: 'Rubik Regular',
