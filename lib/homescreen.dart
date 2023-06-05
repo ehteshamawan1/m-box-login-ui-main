@@ -76,19 +76,67 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 40,
             ),
-            TextFormField(
-              decoration: const InputDecoration(
-                hintText: 'Email',
-                fillColor: Color(0xffF8F9FA),
-                filled: true,
-                prefixIcon: Icon(Icons.alternate_email, color: Color(0xff323F4B),),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffE4E7EB))
-                )
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                  fillColor: const Color(0xffF8F9FA),
+                  filled: true,
+                  prefixIcon: const Icon(Icons.alternate_email,
+                      color: Color(0xff323F4B)),
+                  border: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Color(0xffE4E7EB)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Color(0xffE4E7EB)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
               ),
             ),
+            const SizedBox(
+              height: 15,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              child: TextFormField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                  fillColor: const Color(0xffF8F9FA),
+                  filled: true,
+                  suffixIcon: const Icon(Icons.visibility_off_outlined),
+                  prefixIcon: const Icon(Icons.lock, color: Color(0xff323F4B)),
+                  border: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Color(0xffE4E7EB)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Color(0xffE4E7EB)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text(
+              'Forgot Password?',
+              style: TextStyle(
+                fontSize: 18,
+                fontFamily: 'Rubik Regular',
+                decoration: TextDecoration.underline,
+              ),
+              ),
             const SizedBox(
               height: 100,
             ),
@@ -120,6 +168,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 18,
                       fontFamily: 'Rubik Regular',
                       color: Color(0xff2D3142)),
+                ),
+                SizedBox(
+                  width: 5,
                 ),
                 Text(
                   'Sign Up',
