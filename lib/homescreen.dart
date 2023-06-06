@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             const SizedBox(
               height: 50,
@@ -32,6 +33,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(
+                      height: 50,
+                    ),
                     Text(
                       'Maintenance',
                       style: TextStyle(
@@ -129,30 +133,35 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 20,
             ),
-            const Text(
-              'Forgot Password?',
-              style: TextStyle(
-                fontSize: 18,
-                fontFamily: 'Rubik Regular',
-                decoration: TextDecoration.underline,
+            const Padding(
+              padding: EdgeInsets.only(right: 25),
+              child: Text(
+                'Forgot Password?',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontFamily: 'Rubik Regular',
+                  decoration: TextDecoration.underline,
+                ),
               ),
-              ),
-            const SizedBox(
-              height: 100,
             ),
-            Container(
-              height: 50,
-              width: 300,
-              decoration: BoxDecoration(
-                  color: const Color(0xffF9703B),
-                  borderRadius: BorderRadius.circular(10)),
-              child: const Center(
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: 'Rubik Regular',
-                      color: Colors.white),
+            const SizedBox(
+              height: 30,
+            ),
+            Center(
+              child: Container(
+                height: 50,
+                width: 300,
+                decoration: BoxDecoration(
+                    color: const Color(0xffF9703B),
+                    borderRadius: BorderRadius.circular(10)),
+                child: const Center(
+                  child: Text(
+                    'Login',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: 'Rubik Regular',
+                        color: Colors.white),
+                  ),
                 ),
               ),
             ),
